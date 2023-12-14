@@ -15,4 +15,15 @@ export class TraficServiceService {
   }
 
 
+  postTraffic(traffic:any):Observable<any> {
+    return this.http.post(`${this.baseurl}/create`,traffic);
+  }
+
+
+  getTrafficByGouv(gouv : string):Observable<any>{
+    return this.http.get(`${this.baseurl}/gouv`);
+  }
+
+  
+
 }
