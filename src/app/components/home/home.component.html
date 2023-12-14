@@ -1,0 +1,66 @@
+<div class="container center">
+    <div class="text">
+       Add traffic information
+    </div>
+    <form action="#">
+       <div class="form-row">
+          <div class="input-data">
+            <mat-form-field appearance="outline">
+                <mat-label>Government:</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let gouv of governorates" [value]="gouv">
+                        {{gouv}}
+
+                    </mat-option>
+                </mat-select>
+
+            </mat-form-field>
+            
+          </div>
+          <div class="input-data">
+            <mat-form-field appearance="outline">
+                <mat-label>Location:</mat-label>
+                <input matInput type="text" placeholder="enter the exact location">
+
+            </mat-form-field>
+          </div>
+       </div>
+       <div class="form-row">
+          <div class="input-data">
+            <mat-form-field appearance="outline">
+                <mat-label>Duration:</mat-label>
+                <input matInput type="text" placeholder="enter the duration">
+
+            </mat-form-field>
+          </div>
+          <div class="input-data">
+            <mat-form-field appearance="outline">
+                <mat-label>Severity:</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let severity of severities" [value]="severity">
+                        {{severity}}
+
+                    </mat-option>
+                </mat-select>
+
+            </mat-form-field>
+          </div>
+       </div>
+       <div class="form-row">
+       <div class="input-data">
+        <mat-form-field appearance="outline">
+            <mat-label>Description:</mat-label>
+            <textarea style="width: 100%;" matInput type="text" placeholder="enter the description"></textarea>
+
+        </mat-form-field>
+       
+          
+    </div>
+    </div>
+    </form>
+    
+  
+    </div>
+    <div style="margin-top: 20px;">
+    <button class="btn btn-primary" type="submit">Add infos</button>
+</div>
